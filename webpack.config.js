@@ -31,7 +31,7 @@ module.exports = {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract(
           'style-loader',
-          'css-loader?sourceMap!sass-loader?sourceMap',
+          'css-loader?sourceMap!sass-loader?sourceMap'
         ),
         exclude: /node_modules/,
       },
