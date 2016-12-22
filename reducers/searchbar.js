@@ -4,10 +4,8 @@ import {
 } from '../constants';
 
 export default (state = DEFAULT_STATE, { type, value }) => {
-  console.log(state);
   switch (type) {
     case ACTIONS.SET_SEARCH_TERM:
-      console.dir(value);
       return Object.assign(
         {},
         state,
