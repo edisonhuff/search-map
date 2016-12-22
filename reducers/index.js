@@ -1,8 +1,6 @@
 import { combineReducers } from 'redux';
-import defaultState from './default-state';
-// import myReducers from './anywhere'
+import { DEFAULT_STATE } from '../constants';
+import searchbar from './searchbar';
 
 // add reducers here
-export default combineReducers({
-  default: () => defaultState,
-});
+export default searchbar;

@@ -1,6 +1,24 @@
 @import 'colors';
 
+html {
+  height: 100%;
+}
+
 body {
   background: $bg-light;
   color: $bg-dark;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: 0;
 };
+
+#AppContainer {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
