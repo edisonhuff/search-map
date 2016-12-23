@@ -1,13 +1,20 @@
 /* eslint no-param-reassign: 0*/
-import { ACTIONS } from '../constants';
+import { ACTIONS, ASYNC_ACTIONS } from '../constants';
 
 // a factory for action creators
-export default Object
+export const ACTION_CREATORS = Object
   .keys(ACTIONS)
   .reduce((accum, key) => {
-    accum[key] = value => ({
+    accum[key] = (payload, meta) => ({
       type: key,
-      value,
+      payload,
+      meta,
     });
     return accum;
   }, {});
+
+export const ASYNC_ACTION_CREATORS = {
+  ASYNC_ACTIONS,
+};
+
+export default ACTION_CREATORS;

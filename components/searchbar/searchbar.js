@@ -6,9 +6,10 @@ const SearchBar = ({
   value,
   onChange,
   onSubmit,
+  liveResults,
 }) =>
   <form
-    className="searchBar"
+    className={`searchBar ${value ? '' : 'highlight'}`}
     onSubmit={onSubmit}
   >
     <input
@@ -21,12 +22,23 @@ const SearchBar = ({
     >
       <i className="fa fa-search fa-2" />
     </button>
+    {liveResults.length > 0 &&
+      <ul>
+        {liveResults.map((result, i) =>
+          <li key={i}>
+            {result}
+          </li>
+        )}
+      </ul>
+    }
   </form>;
 
 SearchBar.propTypes = {
-  value: PropTypes.string,
-  onChange: PropTypes.func,
-  onSubmit: PropTypes.func,
+  onChange: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired,
+
+  liveResults: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default SearchBar;

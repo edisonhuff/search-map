@@ -7,7 +7,7 @@ import {
 
 require('./styles.scss');
 
-const MapWrapper = ({ center, places }) =>
+const MapWrapper = ({ center, onClick, places }) =>
   <GoogleMapLoader
     containerElement={<div style={{ height: '100%' }} />}
     googleMapElement={
@@ -19,7 +19,8 @@ const MapWrapper = ({ center, places }) =>
           <Marker
             {...place}
             key={idx}
-          />,
+            onClick={() => onClick(idx)}
+          />
         )}
       </GoogleMap>
     }
@@ -31,8 +32,14 @@ MapWrapper.propTypes = {
       lat: PropTypes.number,
       long: PropTypes.number,
     }),
-  }),
-  places: PropTypes.arrayOf(PropTypes.object),
+  }).isRequired,
+  onClick: PropTypes.func.isRequired,
+  places: PropTypes.arrayOf(PropTypes.shape({
+    position: PropTypes.shape({
+      lat: PropTypes.number,
+      long: PropTypes.number,
+    }),
+  }).isRequired),
 };
 
 export default MapWrapper;

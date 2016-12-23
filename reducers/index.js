@@ -1,6 +1,11 @@
 import { combineReducers } from 'redux';
-import { DEFAULT_STATE } from '../constants';
 import searchbar from './searchbar';
+import sidebar from './sidebar';
+import map from './map';
 
 // add reducers here
-export default searchbar;
+export default combineReducers({
+  searchbar,
+  sidebar,
+  map,
+});

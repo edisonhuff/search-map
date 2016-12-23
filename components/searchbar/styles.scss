@@ -5,23 +5,40 @@
   top: 6px;
   left: 6px;
   z-index: 2;
-  width: 272px;
+  width: 327px;
   background-color: $bg-light;
+  transition-duration: 0.3s;
+  outline: $primary-color 0px solid;
   input {
     border: none;
     height: 24px;
     padding: 12px;
     position: relative;
-    width: 200px;
+    width: 250px;
     font-size: 15px;
     outline: none;
   }
   button {
     border: none;
+    outline: none;
+    cursor: pointer;
     background-color: $bg-light;
     font-size: 15px;
     padding: 12px;
     height: 48px;
     width: 48px;
   }
+  ul {
+    list-style: none;
+    border-top: 1px solid $secondary-color;
+    margin: 0px 12px;
+    padding: 0;
+  }
+  li {
+    padding: 12px;
+  }
+}
+
+.highlight {
+  outline: $primary-color 6px solid;
 }
