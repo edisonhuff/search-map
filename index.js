@@ -12,7 +12,7 @@ import App from './components/App';
 
 let store = createStore(
   reducers,
-  applyMiddleware(thunk),
+  // applyMiddleware(thunk),
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 

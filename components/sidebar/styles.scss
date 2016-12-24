@@ -1,0 +1,82 @@
+@import '../colors';
+
+.sidebar {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  z-index: 1;
+  width: 339px;
+  background-color: $bg-light;
+  box-shadow: 2px 4px rgba(0,0,0,0.2);
+  transition-duration: 0.3s;
+  .container {
+    overflow-y: scroll;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    border-top: 60px solid $bg-dark;
+  }
+  button {
+    position: absolute;
+    right: 0px;
+    width: 36px;
+    height: 36px;
+    padding: 12px;
+    z-index: 2;
+    background-color: $bg-light;
+    border: none;
+    box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+    outline: none;
+    cursor: pointer;
+    margin: 12px;
+  }
+  div {
+    padding: 12px;
+    i {
+      position: absolute;
+      right: 12px;
+      color: $primary-color;
+      cursor: pointer;
+    }
+  }
+  ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px 0px 0px;
+  }
+  li {
+    cursor: pointer;
+    padding: 12px;
+    &:hover {
+      background-color: ghostwhite;
+    }
+  }
+  h3 {
+    margin: 0px;
+  }
+  p {
+    margin: 0px;
+  }
+  a {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+
+.borderTop {
+  border-top: 1px solid lightgrey;
+}
+
+.persist {
+  position: fixed !important;
+  left: 315px !important;
+}
+
+.sidebar-hidden {
+  left: -339px;
+}

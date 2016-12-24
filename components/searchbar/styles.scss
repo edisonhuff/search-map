@@ -4,11 +4,12 @@
   position: absolute;
   top: 6px;
   left: 6px;
-  z-index: 2;
+  z-index: 3;
   width: 327px;
   background-color: $bg-light;
   transition-duration: 0.3s;
-  outline: $primary-color 0px solid;
+  border-radius: 2px;
+  box-shadow: 2px 4px rgba(0,0,0,0.2);
   input {
     border: none;
     height: 24px;
@@ -32,13 +33,9 @@
     list-style: none;
     border-top: 1px solid $secondary-color;
     margin: 0px 12px;
-    padding: 0;
+    padding: 0px;
   }
   li {
     padding: 12px;
   }
-}
-
-.highlight {
-  outline: $primary-color 6px solid;
 }

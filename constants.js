@@ -9,6 +9,7 @@ export const ACTIONS = {
 
 export const ASYNC_ACTIONS = {
   GET_SEARCH_RESULTS: 'GET_SEARCH_RESULTS',
+  GET_LIVE_SEARCH: 'GET_LIVE_SEARCH',
 };
 
 export const DEFAULT_STATE = {
@@ -17,22 +18,127 @@ export const DEFAULT_STATE = {
       lat: 37.785112,
       lng: -122.395584,
     },
-    places: [
-      {
-        label: 'Opportunity',
-        position: {
-          lat: 37.785112,
-          lng: -122.395584,
-        },
-      },
-    ],
   },
-  searchBar: {
+  searchbar: {
     value: '',
     liveResults: [],
   },
-  sideBar: {
-    selectedPlace: 0,
-    isSideBarOpen: false,
-  }
+  sidebar: {
+    selectedPlace: null,
+    isOpen: true,
+  },
+  places: [
+    {
+      description: 'Zenefits HQ',
+      label: 'Opportunity',
+      position: {
+        lat: 37.785112,
+        lng: -122.395584,
+      },
+    },
+    {
+      description: 'herp',
+      label: 'Somewhere',
+      position: {
+        lat: 37.785,
+        lng: -122.395584,
+      },
+    },
+        {
+      description: 'herp',
+      label: 'Somewhere',
+      position: {
+        lat: 37.785,
+        lng: -122.395584,
+      },
+    },
+        {
+      description: 'herp',
+      label: 'Somewhere',
+      position: {
+        lat: 37.785,
+        lng: -122.395584,
+      },
+    },
+        {
+      description: 'herp',
+      label: 'Somewhere',
+      position: {
+        lat: 37.785,
+        lng: -122.395584,
+      },
+    },
+        {
+      description: 'herp',
+      label: 'Somewhere',
+      position: {
+        lat: 37.785,
+        lng: -122.395584,
+      },
+    },
+        {
+      description: 'herp',
+      label: 'Somewhere',
+      position: {
+        lat: 37.785,
+        lng: -122.395584,
+      },
+    },
+        {
+      description: 'herp',
+      label: 'Somewhere',
+      position: {
+        lat: 37.785,
+        lng: -122.395584,
+      },
+    },
+        {
+      description: 'herp',
+      label: 'Somewhere',
+      position: {
+        lat: 37.785,
+        lng: -122.395584,
+      },
+    },
+        {
+      description: 'herp',
+      label: 'Somewhere',
+      position: {
+        lat: 37.785,
+        lng: -122.395584,
+      },
+    },
+        {
+      description: 'herp',
+      label: 'Somewhere',
+      position: {
+        lat: 37.785,
+        lng: -122.395584,
+      },
+    },
+        {
+      description: 'herp',
+      label: 'Somewhere',
+      position: {
+        lat: 37.785,
+        lng: -122.395584,
+      },
+    },
+        {
+      description: 'herp',
+      label: 'Somewhere',
+      position: {
+        lat: 37.785,
+        lng: -122.395584,
+      },
+    },
+        {
+      description: 'herp',
+      label: 'Somewhere',
+      position: {
+        lat: 37.785,
+        lng: -122.395584,
+      },
+    },
+  ],
 };

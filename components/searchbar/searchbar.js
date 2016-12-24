@@ -13,7 +13,7 @@ const SearchBar = ({
     onSubmit={onSubmit}
   >
     <input
-      onChange={onChange}
+      onChange={event => onChange(event.target.value)}
       placeholder={'search for locations here'}
       value={value}
     />
@@ -22,7 +22,7 @@ const SearchBar = ({
     >
       <i className="fa fa-search fa-2" />
     </button>
-    {liveResults.length > 0 &&
+    {liveResults && liveResults.length > 0 &&
       <ul>
         {liveResults.map((result, i) =>
           <li key={i}>
@@ -36,8 +36,8 @@ const SearchBar = ({
 SearchBar.propTypes = {
   onChange: PropTypes.func.isRequired,
   onSubmit: PropTypes.func.isRequired,
-  value: PropTypes.string.isRequired,
 
+  value: PropTypes.string,
   liveResults: PropTypes.arrayOf(PropTypes.string),
 };
 
